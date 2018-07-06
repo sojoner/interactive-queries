@@ -24,9 +24,9 @@ This is example implementation of blog article [Unifying Stream Processing and I
 2. Seed data
 
 	```
-	echo "1--john\n2--adam\n3--daniel\n4--james\n5--jack\n6--mathew\n7--will" | bin/kafka-console-producer --broker-list localhost:9092 --topic customer --property parse.key=true --property key.separator="--"
+	echo "1--john\n2--adam\n3--daniel\n4--james\n5--jack\n6--mathew\n7--will" | bin/kafka-console-producer.sh --broker-list localhost:9092 --topic customer --property parse.key=true --property key.separator="--"
 		  
-	echo "1--spagety\n2--pizza\n--pasta" | bin/kafka-console-producer --broker-list localhost:9092 --topic order  --property parse.key=true --property key.separator="--"
+	echo "1--spagety\n2--pizza\n--pasta" | bin/kafka-console-producer.sh --broker-list localhost:9092 --topic order  --property parse.key=true --property key.separator="--"
 	```
   
 3. Run application
